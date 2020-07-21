@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: url(pics/bg.jpg);
+    background-size: cover;   
+}
+#card{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform: perspective(500px);
+}
+#card .frente, #card .verso{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+#card .frente{
+    background: url(pics/IMG2.png);
+    background-size: cover;
+}
+
+#card .verso{
+    background: url(pics/IMG3.png);
+    background-size: cover;
+    transform: rotateY(180deg);
+}

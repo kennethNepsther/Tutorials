@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Relogio Análogico</title>    
+</head>
+<body>
+    <div class="relogio">
+        <div class="horas">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="minutos">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="segundos">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script>
+    const deg = 6;
+    const ponteiroHoras = document.querySelector("#hr");
+    const ponteiroMinutos = document.querySelector("#mn");
+    const ponteiroSegundos = document.querySelector("#sc");
+    setInterval(() =>{
+        let data = new Date();
+        let hora = data.getHours() * 30;
+        let minuto = data.getMinutes() *deg;
+        let segundo = data.getSeconds() *deg;
+        ponteiroHoras.style.transform = `rotateZ(${hora+(minuto/12)}deg)`;
+        ponteiroMinutos.style.transform =  `rotateZ(${minuto}deg)`;
+        ponteiroSegundos.style.transform =  `rotateZ(${segundo}deg)`;
+
+    }) 
+    </script>
+</body>
+</html>
