@@ -1,0 +1,31 @@
+body{
+    background: rgba(25, 0, 255, 0.26);
+    font: normal 12px arial;
+}
+
+header{
+    text-align: center;
+    color: white;
+}
+
+section{
+    background: white;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+}
+#tempo{
+    font: bold 90px arial;
+    color: brown;
+    padding: 50px;
+    border: 2px dashed rgba(202, 9, 35, 0.966);
+   
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    color: white;
+}

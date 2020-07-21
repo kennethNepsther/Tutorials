@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta author="Kenneth Luzolo">
+    <title>Movimentar os olhos</title>
+    <link rel="stylesheet" href="makup.css">
+</head>
+<body>
+    <div class="face">
+        <div class="olhos">
+            <div class="olho"></div>
+            <div class="olho"></div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('body')
+        .addEventListener('mousemove',moverolhos);
+
+        function moverolhos() {
+            var olho = document.querySelectorAll('.olho');
+                olho.forEach(function(olho){
+                let coordenadaX = (olho.getBoundingClientRect().left)+(olho.clientWidth / 2);
+                let coordenadaY = (olho.getBoundingClientRect().top)+(olho.clientHeight / 2);
+                let radiano = Math.atan2(event.pageX - coordenadaX, event.pageY - coordenadaY);
+                let rotacao = (radiano * (180 / Math.PI) * -1) + 270;
+                olho.style.transform = "rotate("+ rotacao +"deg)";
+            })
+            
+        }
+    
+    </script>
+    
+</body>
+</html>
